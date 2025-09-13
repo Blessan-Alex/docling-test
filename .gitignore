@@ -120,7 +120,18 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Docling specific
+# Docling specific - exclude processed outputs but allow test files
+# Allow test-docs/ folder contents
+!test-docs/
+!test-docs/**
+
+# Exclude processed results and outputs
+results/
+test_results/
+output/
+processed/
+
+# Exclude large document files outside test-docs
 *.pdf
 *.docx
 *.pptx
@@ -138,11 +149,23 @@ dmypy.json
 *.dwg
 *.dxf
 
-# Test results and outputs
-results/
-test_results/
-output/
-processed/
+# But allow files in test-docs folder
+!test-docs/*.pdf
+!test-docs/*.docx
+!test-docs/*.pptx
+!test-docs/*.xlsx
+!test-docs/*.csv
+!test-docs/*.txt
+!test-docs/*.md
+!test-docs/*.json
+!test-docs/*.jpg
+!test-docs/*.jpeg
+!test-docs/*.png
+!test-docs/*.gif
+!test-docs/*.bmp
+!test-docs/*.tiff
+!test-docs/*.dwg
+!test-docs/*.dxf
 
 # Temporary files
 *.tmp
