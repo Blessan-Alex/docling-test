@@ -131,6 +131,16 @@ test_results/
 output/
 processed/
 
+# Allow essential project files
+!requirements.txt
+!README.md
+!*.py
+!*.yml
+!*.yaml
+!*.toml
+!*.cfg
+!*.ini
+
 # Exclude large document files outside test-docs
 *.pdf
 *.docx
